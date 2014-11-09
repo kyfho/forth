@@ -1,4 +1,2 @@
-: 2SORT 2DUP < IF SWAP THEN ;
-: 2MAX 2SORT ROT 2SORT DROP ;
-: SQSUM 2MAX DUP * SWAP DUP * + ;
-
+: sq ( n -- n² ) dup * ;
+: g ( a b c -- n )  2dup max sq >r min max sq r> + ;
